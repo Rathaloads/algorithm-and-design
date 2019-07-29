@@ -57,30 +57,31 @@ function callback(){
     // function2: Yes
     // 全局: Hello
     ```
-    等价于
-    ```js
 
-    function foo(str) {
+    等价于
+
+    ```js
+      function foo(str) {
         var str = str;
         console.log("function1:", str);
         str = "Yes";
         console.log("function:", str);
-    }
-    var goo;
-    goo = "Hello";
-    foo(goo)
-    console.log("全局:", goo)
+      }
+      var goo;
+      goo = "Hello";
+      foo(goo)
+      console.log("全局:", goo)
 
-
-    function A(str) {
+      function A(str) {
         var str;
         console.log('log1:', str)
         var str = 'Alex';
         console.log('log2:', str)
         str = 'Perry';
         console.log('log3:', str)
-    }
-    A('Loly')
+      }
+      A('Loly')
+
     ```
 
     [参考](https://www.cnblogs.com/yuanzhiguo/p/10626352.html)
