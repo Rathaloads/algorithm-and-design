@@ -64,6 +64,8 @@ vue.js 则是采用数据劫持结合发布者-订阅者模式的方式，通过
 
 我们先根据真实DOM生成一颗virtual DOM，当virtual DOM某个节点的数据改变后会生成一个新的Vnode，然后Vnode和oldVnode作对比，发现有不一样的地方就直接修改在真实的DOM上，然后使oldVnode的值为Vnode。diff的过程就是调用名为patch的函数，比较新旧节点，一边比较一边给真实的DOM打补丁。
 
+基本原则： 如果类型不同，则直接调用 `replaceVNode` 函数使用新的 `VNode` 替换旧的 `VNode`，否则根据不同的类型调用与之相符的比对函数.
+
 ---
 
 > vue的ref
